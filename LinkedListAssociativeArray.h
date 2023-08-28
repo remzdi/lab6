@@ -38,7 +38,7 @@ public:
         tail = nullptr;
     }
 
-    void insert(const KeyType& key, const ValueType& value) {
+    void insert(const KeyType& key, const ValueType& value) { //вставляє новий вузол з ключем key і значенням value в кінець однозв'язного списку
         Node* newNode = new Node(key, value);
         if (isEmpty()) {
             head = newNode;
