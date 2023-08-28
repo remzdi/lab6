@@ -37,3 +37,20 @@ public:
 };
 
 #endif
+
+    LinkedListAssociativeArrayIterator& operator++() {
+        if (current) {
+            current = current->next;
+        }
+        return *this;
+    }
+
+    ValueType& operator*() const {
+        if (!current) {
+            throw out_of_range("Iterator is out of range.");
+        }
+        return current->value;
+    }
+};
+
+#endif
